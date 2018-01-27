@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        {{!--
+        <div class="col-md-12">
+            <header class="mt-3">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link active">Activity</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/acct/messages">Messages
+                            <span id="msgCnt"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/acct/account">Account</a>
+                    </li>
+                </ul>
+            </header>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-4">
+            <div class="card" id="resultDiv">
+                <div class="bg-primary">
+                    <span class="font-weight-bold text-white pl-2">Log</span>
+                </div>
+                <div class="card-block pl-2"></div> --}} {{!--
+                <div id="mySwaps" class="modal">
+
+                    <div class="modal-content"> --}}
+                        <h5>Select the toy you'd like to swap, if there's nothing here, that just mean no one swapped you yet!</h5>
+                        {{#each mySwaps}}
+                        <div class="container">
+                            <div class= "row"> 
+                            <h5>Their Toy</h5>
+
+                            <div class="col" style=" border-radius: 5px; width: 230px">
+                                <div class="item-container">
+                                    <div class="item-pic">
+                                        <img class="vertical-middle" id="swap-me-{{incomingId}}" width="200" height="160" src="{{incomingUrl}}" alt="{{incomingTitle}}"
+                                            style="margin-top: 10px">
+                                    </div>
+
+                                    <a class="btn-floating btn-large waves-effect waves-light red swapMe" id="swap-{{id}}">
+                                        <i class="material-icons">add</i>
+                                    </a>
+                                    <span class="incomingTitle-{{id}}">{{incomingTitle}}</span>
+                                </div>
+                            </div>
+                            <hr>
+                            </div>
+                            </div>
+                            <div class="container">
+                                <div class= "row"> 
+                            <h5>For Your Toy</h5>
+                            <div class="col" style=" border-radius: 5px; width: 230px">
+                                <div class="item-container">
+                                    <div class="item-pic">
+                                        <img class="vertical-middle" id="swap-me-{{sellerId}}" width="200" height="160" src="{{sellerUrl}}" alt="{{sellerTitle}}"
+                                            style="margin-top: 10px">
+                                    </div>
+
+                                    <a class="btn-floating btn-large waves-effect waves-light red swapMe" id="swap-{{id}}">
+                                        <i class="material-icons">add</i>
+                                    </a>
+                                    <span class="incomingTitle-{{id}}">{{sellerTitle}}</span>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        {{/each}} {{!--
+                        <div class="modal-footer">
+                            <a href="#swap" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+                        </div>
+                    </div>
+                </div> --}} {{!-- </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 mt-4">
+            <button id="clrLog" class="btn btn-danger" data-toggle='tooltip' title='Clear Log'>Clear</button>
+        </div> --}}
+    </div>
+</div>

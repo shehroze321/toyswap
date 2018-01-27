@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "dariell",
+    "password": "password",
+    "database": "toyswap",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "zlbfxk3cxd6ilt02",
+    "password": "biullhj5xz3btnak",
+    "database": "wq64ndr91mle202i",
+    "host": "k3xio06abqa902qt.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  }
+}

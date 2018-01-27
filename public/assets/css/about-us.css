@@ -1,0 +1,128 @@
+#about-us-title{
+  text-shadow: 3px 2px #f88b89;
+}
+#meet-us{
+  font-family: 'Suez One', serif;
+  margin-top: 50px;
+  color: white;
+  font-size: 370%;
+}
+.carousel{
+  margin-bottom: 50px;
+}
+#footer-toyswap{
+  font-family: 'Suez One', serif;
+  font-size: 20px;
+  color: white;
+}
+#footer-toyswap img{
+  background-color: #ef5350; 
+  height: 18px;
+  width: 75px;
+  margin-top: 9px;
+
+}
+#menu{
+  color: #ef5350;
+}
+a{
+  color: white;
+  width: 40%;
+}
+
+.material-icons {
+  color: #ef5350;
+  }
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #ef5350;
+}
+
+.parallax-container {
+  min-height: 70vh;
+  line-height: 0;
+  height: auto;
+  background-color: #ef5350;
+  
+}
+.parallax-container .section {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 75px;
+  }
+
+.fixed-action-btn{
+top: 24px; 
+left: 24px; 
+height: 50px;
+width: 50px;
+}
+
+
+.fixed-action-btn.horizontal ul{
+left: -40px;
+text-align: center;
+
+}
+
+.description-label{
+  margin-left: 50px;
+}
+
+/*MEDIA QUERIES--------------------------------*/
+
+@media only screen and (max-width : 1200px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+
+  
+  }
+  
+  #about-us-title {
+  font-size: 60px;
+  margin-top: 0%;
+}
+  #index-banner .section {
+    top: 10%;
+
+  }
+}
+
+@media only screen and (max-width : 800px) {
+  
+  #index-banner .section {
+    top: 10%;
+  }
+  #about-us-title {
+  font-size: 60px;
+  margin-top: 0%;
+}
+}
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}/*ABOUT PAGE CSS-----------------------------*/ 
+
+
+
+#about-page {
+  font-size: 150%;
+
+}
+#about-us-title{
+  font-family: 'Suez One', serif;
+  font-size: 580%;
+}

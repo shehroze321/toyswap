@@ -1,0 +1,199 @@
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+h1{
+  font-family: 'Suez One', serif;
+  font-size: 250px;
+  text-shadow: 3px 2px #f88b89;
+    margin-top: 8%;
+}
+h5#works{
+  font-family: 'Suez One', serif;
+  color: white;
+  font-size: 250%;
+}
+h5#fall{
+  font-family: 'Suez One', serif;
+  color: white;
+  font-size: 250%;
+}
+body{
+background-color: #e5dbdb;
+background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23f00404' fill-opacity='0.14' fill-rule='evenodd'/%3E%3C/svg%3E");
+} 
+/* FORM ON HOME PAGE */
+.input-field label {
+  font-size: 2em;
+  top:-.5em;
+  color: #ef5350;
+}
+
+.description-label {
+  margin-left:10px;
+}
+
+/* END FORM */
+/*#toy-group{
+  background-image: url("../img/toy-group.jpg");
+}*/
+
+.page-footer{
+  background-image: url("../img/tweed.png");
+}
+
+#footer-toyswap{
+  font-family: 'Suez One', serif;
+  font-size: 20px;
+  color: white;
+}
+#footer-toyswap img{
+   
+  height: 18px;
+  width: 75px;
+  margin-top: 10px;
+
+}
+
+a{
+  width: 40%;
+}
+
+#open-buttons{
+  margin-top: 5%;
+  padding: 0%;
+  
+}
+
+#group-div{
+text-align: center;
+}
+
+#connect-div{
+text-align: center;
+}
+
+
+.material-icons {
+  color: #ef5350;
+  }
+
+p {
+  line-height: 2rem;
+  font-size: 150%;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 100vh;
+  min-width: 101%;
+  right: 1%;
+ 
+}
+
+video#toyswap-vid { 
+     
+    
+    right: 10%;
+    
+    
+
+}
+
+.fixed-action-btn{
+top: 24px; 
+left: 24px; 
+height: 50px;
+width: 50px;
+
+}
+
+#menu-btn{
+filter: url("#goo");
+}
+
+svg{
+  margin: -21vh;
+}
+
+
+.fixed-action-btn.horizontal ul{
+left: -40px;
+text-align: center;
+
+}
+
+.description-label{
+  margin-left: 50px;
+}
+
+/*MEDIA QUERIES--------------------------------*/
+
+@media only screen and (max-width : 1200px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 20%;
+
+  
+  }
+  #toyswap-title {
+    font-size: 160px;
+    margin-top: 15%;
+  }
+  #index-banner .section {
+    top: 10%;
+
+  }
+}
+
+@media only screen and (max-width : 800px) {
+  #toyswap-title {
+  font-size: 60px;
+  margin-top: 25%;
+}
+  #index-banner .section {
+    top: 10%;
+  }
+  
+}
+
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+/*-------------------------------------------*/
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+.viewImg {
+    height: 400px;
+    width: 400px;
+}
+
+#title{
+    font-size: 23px;
+}
+
+#dataContBot {
+    background-color: #f5f5f5;
+ }

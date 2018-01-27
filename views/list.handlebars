@@ -1,0 +1,330 @@
+<!-- Modal Structure -->
+<div id="newToyUpload" class="modal">
+    <div class="modal-content">
+        <div class="container">
+            <h4 class="center">Upload an Item!</h4>
+            <div class="row">
+                <form class="col s12 create-form">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="title" type="text" class="validate" required="" aria-required="true">
+                            <label class="home-label" for="title">Title</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="product_condition" name="example" type="text" class="validate" required="" aria-required="true">
+                            <label class="home-label" for="condition">Condition</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="availability" name="example" type="number" class="validate" required="" aria-required="true">
+                            <label class="home-label" for="quantity">Quantity</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="price" name="example" type="number" class="validate" required="" aria-required="true">
+                            <label class="home-label" for="price">Retail Price</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <textarea id="description" class="materialize-textarea validate" name="example" type="text" required="" aria-required="true"></textarea>
+                            <label class="home-label" for="description">Description</label>
+                        </div>
+
+                        <form action="#">
+                            <div class="file-field input-field col s6">
+                                <div class="btn-floating btn-small waves-effect waves-light red lighten-1">
+                                    <i class="material-icons">add</i>
+                                    <input type="file">
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input id="url" class="file-path validate" required="" aria-required="true" type="text">
+                                    <label class="description-label" for="description">Image URL</label>
+                                </div>
+                            </div>
+                        </form>
+                        <button id="newToy" class="btn btn-large modal-action modal-close waves-effect waves-red btn-flat">Submit New Toy</button>
+                        <button class="btn btn-large modal-action modal-close waves-effect waves-red btn-flat">CLOSE</button>
+                    </div>
+
+
+                    {{!--
+                    <div class="row">
+                        <div class="input-field col s12 center">
+                            <button class="btn waves-effect waves-light red lighten-1" id="newToy" type="submit" name="action">Submit</button>
+                        </div>
+                    </div> --}}
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="nav">
+    <div class="navbar-fixed">
+        <nav class="red lighten-1 loaded" role="navigation">
+
+
+            <div class="nav-wrapper container">
+
+                <a id="logo-container" href="/home" class="brand-logo" style="color: white; font-family:'Suez One', serif">ToySwap</a>
+
+
+                <ul class="right hide-on-med-and-down">
+
+                    <li>
+                        <a href="/home">Home</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a class="modal-trigger" href="#newToyUpload">Upload</a>
+                    </li>
+                    <li>
+                        <a href="/activity">MySwaps</a>
+                    </li>
+                </ul>
+                <ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+                    <li>
+                        <a href="#">Navbar Link</a>
+                    </li>
+                </ul>
+                <a href="#" data-activates="nav-mobile" class="button-collapse">
+                    <i class="material-icons">menu</i>
+
+                </a>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="box-contianer">
+
+    <div class="image">
+        <img src="/assets/img/starwars.jpg" alt="Mountain View" id="imageOne" width="1447" height="700">
+
+        <h2 class="centered">The simplest way to
+            <br> trade your toys
+            <br>
+            <br>
+
+
+            <form>
+                <div class="input-field">
+
+                    <input id="search" type="search" required>
+
+                    <label class="label-icon" for="search">
+                        <i class="material-icons grey-text">search</i>
+
+                    </label>
+                    <i class="material-icons">close</i>
+                </div>
+            </form>
+    </div>
+</div>
+
+
+<div class="col s1">
+    <a class='dropdown-button btn grey lighten-1' href='#' data-activates='dropdown1' style="font-family: avenir, 'avenir next', helvetica, arial, sans-serif;">Best sellers</a>
+
+    <!-- Dropdown Structure -->
+    <ul id='dropdown1' class='dropdown-content'>
+        <li>
+            <a href="#!">one</a>
+        </li>
+        <li>
+            <a href="#!">two</a>
+        </li>
+        <li>
+            <a href="#!">three</a>
+        </li>
+
+    </ul>
+</div>
+
+<div class="box-contianer">
+    <div class="section holder">
+        <div class="row" id="rowOne">
+            {{#each inventory}}
+            <div class="col s6" style=" border-radius: 5px; width: 230px">
+                <div class="item-container">
+                    <div class="item-pic">
+                        <a href="/toy/{{id}}/{{UserId}}" class="opa-hover">
+                            <img class="vertical-middle" width="200" height="160" src="{{url}}" alt="{{title}}" style="margin-top: 10px">
+                        </a>
+                    </div>
+
+                    <div class="item-info">
+                        <div class="item-info-title" style="text-align: center; font-family: Roboto, sans-serif; color: black">
+                            <a href="/toy/{{id}}/{{UserId}}">{{title}}</a>
+                        </div>
+                        <div class="item-info-price" style="text-align: right; font-size: 20px; color: #969696; font-family: Source Sans Pro,Helvetica Neue,Helvetica,Arial,sans-serif; margin-right: 10px">${{price}}</div>
+
+                        <div class="item-info-condition" style="text-align: right; font-size: 12p; margin-right:10px">
+                            <span>{{product_condition}}</span>
+                        </div>
+                    </div>
+                    <a href="/toy/{{id}}" class="bold">
+                        <div class="owner-info" style="border-top: 1px solid rgb(216, 216, 216); width: 200px; margin-bottom: 10px">
+                            <div class="owner-info-pic">
+                                {{!--
+                                <img class="avatar vertical-middle" src="https://vignette.wikia.nocookie.net/logopedia/images/4/4c/Walmart-logo-new.jpg/revision/latest/scale-to-width-down/639?cb=20130919205844g"
+                                    width="100" height="30" style="margin-left: 55px"> --}}
+
+
+                            </div>
+
+                            <div class="col s2">
+                                <i class="material-icons  teal-text" style="margin-left:100px">email star local_offer</i>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+<ul class="pagination" id="page-number">
+    <li class="disabled">
+        <a href="#!">
+            <i class="material-icons">chevron_left</i>
+        </a>
+    </li>
+    <li class="red lighten-3">
+        <a href="#!">1</a>
+    </li>
+    <li class="waves-effect">
+        <a href="#!">2</a>
+    </li>
+    <li class="waves-effect">
+        <a href="#!">3</a>
+    </li>
+
+    <li class="waves-effect">
+        <a href="#!">
+            <i class="material-icons">chevron_right</i>
+        </a>
+    </li>
+</ul>
+
+
+<footer class="page-footer" style="width: 100%">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12" id="group-div">
+                <h5 class="white-text">Project 2 Group Members</h5>
+                <ul>
+                    <a class="white-text" href="https://github.com/Dquez">
+                        <li>Dariell Vasquez</li>
+                    </a>
+                    <a class="white-text" href="https://github.com/dogrock2">
+                        <li>Alexander Nieves</li>
+                    </a>
+                    <a class="white-text" href="https://github.com/yubinjamora">
+                        <li>Yubin Jamora</li>
+                    </a>
+                    <a class="white-text" href="https://github.com/nolanconorj">
+                        <li>Conor Nolan</li>
+                    </a>
+                </ul>
+
+            </div>
+
+            <div class="col l6 s12" id="connect-div">
+                <h5 class="white-text">Connect With Us!</h5>
+                <ul>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/in/dariellvasquez7">LinkedIn - Dariell</a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/in/alexander-nieves-a04b76b1/">LinkedIn - Alex</a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/in/yubin-jamora-410b02b5/">LinkedIn - Yubin</a>
+                    </li>
+                    <li>
+                        <a class="white-text" href="https://www.linkedin.com/in/conorjamesnolan/">LinkedIn - Conor</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="center footer-copyright red lighten-1">
+        <div class="container" id="footer-toyswap">
+            <a class="white-text" href="https://github.com/full-stack-project-2/full-stack-project-2">ToySwap
+                <img src="assets/img/github.png" alt="GitHub">
+            </a>
+
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<div class="hiddendiv common"></div>
+<div class="drag-target" data-sidenav="nav-mobile" style="touch-action: pan-y; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;"></div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="assets/js/list.js"></script>
+
+
+
+
+
+
+{{!--
+<div class="container">
+    <h4 class="center">Upload an Item!</h4>
+    <div class="row">
+        <form class="col s12 create-form">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="title" type="text" class="validate" required="" aria-required="true">
+                    <label class="home-label" for="title">Title</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="product_condition" name="example" type="text" class="validate" required="" aria-required="true">
+                    <label class="home-label" for="condition">Condition</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="availability" name="example" type="number" class="validate" required="" aria-required="true">
+                    <label class="home-label" for="quantity">Quantity</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="price" name="example" type="number" class="validate" required="" aria-required="true">
+                    <label class="home-label" for="price">Retail Price</label>
+                </div>
+
+
+                <div class="input-field col s6">
+                    <textarea id="description" class="materialize-textarea validate" name="example" type="text" required="" aria-required="true"></textarea>
+                    <label class="home-label" for="description">Description</label>
+                </div>
+
+                <form action="#">
+                    <div class="file-field input-field col s6">
+                        <div class="btn-floating btn-small waves-effect waves-light red lighten-1">
+                            <i class="material-icons">add</i>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input id="url" class="file-path validate" required="" aria-required="true" type="text">
+                            <label class="description-label" for="description">Image URL</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+
+            {{!--
+            <div class="row">
+                <div class="input-field col s12 center">
+                    <button class="btn waves-effect waves-light red lighten-1" id="newToy" type="submit" name="action">Submit</button>
+                </div>
+            </div> --}}
+
+
+        </form>
+    </div>
+</div> --}}
