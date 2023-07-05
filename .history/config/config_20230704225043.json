@@ -1,15 +1,12 @@
 {
   "development": {
     "username": "root",
-    "password": "root123",
+    "password": "Asghar@786",
     "database": "toyswap",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "dialect": "mysql",
-    "dialectOptions": {
-      "insecureAuth": true
-    }
+    "insecureAuth": true
   },
-
   "test": {
     "username": "root",
     "password": null,
